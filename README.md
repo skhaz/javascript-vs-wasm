@@ -15,16 +15,22 @@ asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf install nodejs 18.12.1
 ```
 
-### Install Rust
+### Install Go
 
 ```shell
-asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
-asdf install rust 1.66.1
+asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+asdf install golang 1.19.5
 ```
 
 ### Add globally
 
 ```shell
 echo "nodejs 18.12.1" >> ~/.tool-versions
-echo "rust 1.66.1" >> ~/.tool-versions
+echo "golang 1.19.5" >> ~/.tool-versions
+```
+
+### Building WASM
+
+```shell
+GOOS=js GOARCH=wasm go build -o knapsack
 ```
